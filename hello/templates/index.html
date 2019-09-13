@@ -1,0 +1,454 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<header>
+<h1 class="heading__big--center">Backend Developer Trainee – ennakkotehtävä</h1>
+</header>
+
+
+<div class="grid-container">
+<div class="grid grid--center">
+<div class="1/1 3/4--desk grid__cell">
+<div class="grid-sandbox grid-sandbox--extraspace">
+<h2 class="heading__big">Huippua, että pääsit tänne asti!</h2>
+<p>Nyt me halutaan pikkusen testata sua, koska koodaustaidothan ne on A ja O tässä pestissä!</p>
+<ol>
+<li><strong>Kopioi!</strong></li>
+<p>Käytä 'hakkerointitaitojas' ja kopio tää sivu asumaan jonnekin omaan paikkaan, jonka voit myöhemmin linkata meille.
+Voit käyttää esimerkiksi Herokua, jolla mahdollista luoda oma app (esimerkki: <a target="_blank" href="https://duunitori-trainee.herokuapp.com/">https://duunitori-trainee.herokuapp.com/</a>).
+Joku muu sun lempparipalvelu, mikä? Käytä vapaasti jotain muuta palvelua, mutta muista perustella meille, mikä on hyvää siinä palvelussa.</p>
+<li><strong>GitHub</strong></li>
+<p>Me rakastetaan GitHubia ja se on yks tärkeimmistä työkaluista meidän ohjelmistokehitysprojekteissa ja versionhallinnassa. Toivotaan siis myös, että koodi, jota tuotat tässä
+ennakkotehtävässä tulis löytymään joko GitHubista tai vaihtoehtosesti voit myös käyttää esim Bitbucket tai vastaavaa.</p>
+<li><strong>Let's code</strong></li>
+<p>Alla on tehtävä ja tarkempi ohjeistus. Datasetin tehtäviin saat ladattua <a href="https://skyhood-duunitori5.s3.eu-central-1.amazonaws.com/rekry/jobentry_export_2019-8-23T9_59.csv">täältä</a>.</p>
+</ol>
+<p>Jos kysymyksiä herää missään vaiheessa, voit aina olla yhteydessä Hetaan (<a href="mailto:heta@duunitori.fi">heta@duunitori.fi</a> / <a target="_blank" href="https://www.linkedin.com/in/heta/">LinkedIn</a> / <a target="_blank" href="https://www.facebook.com/heta.parssinen">Facebook</a> / <a href="https://api.whatsapp.com/send?phone=358407597794&text=">WhatsApp</a> / <a href="tel:0407597794">040 759 7794</a>).</p>
+</div>
+</div>
+<div class="1/1 3/4--desk grid__cell">
+<div class="grid grid--center">
+<div class="1/1 1/2--lap-and-up grid__cell">
+<div class="grid-sandbox">
+<img class="image__category" src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/looking_for_job.svg" alt="Duunitori työpaikat" title="Duunitori työpaikat">
+<h2 class="heading__category">Datasetin käsittely</h2>
+<div>
+<p><strong>TODO:</strong></p>
+<ul>
+ <li>Käsittele datasetti ja laske, mikä on lukukertojen <strong>keskiarvo</strong> sekä <strong>mediaani</strong>.</li>
+<li>Vertaa lukukertoja sekä hakuklikkejä ajanjaksoon, jona työpaikkailmoitus on ollut auki. Visualisoi tämä alla olevaan kaavioon "Esimerkki visualisoitu data".</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="1/1 1/2--lap-and-up grid__cell">
+<div class="grid-sandbox">
+<img class="image__category" src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/illustration_companies.svg" alt="Duunitori työpaikat" title="Duunitori työpaikat">
+<h2 class="heading__category">Listaa vastaukset esimerkiksi tähän</h2>
+<span class="cursor_blink">
+{{ my_text }}
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="1/1 3/4--desk grid__cell">
+<div class="grid-sandbox grid-sandbox--extraspace">
+<div class="grid">
+<div class="1/1 grid__cell">
+<h2 class="heading__big">Esimerkki visualisoitu data</h2>
+<p>Chart on luotu käyttäen <a href="https://www.chartjs.org/">Chartjs</a> kirjastoa.
+Jos jokin muu kirjasto on sinulle tutumpi, voit vapaasti valita myös jonkin toisen!</p>
+<canvas id="myChart" width="400" height="400"></canvas>
+</div>
+</div>
+</div>
+</div>
+<div class="1/1 3/4--desk grid__cell">
+<div class="grid-sandbox grid-sandbox--extraspace">
+<div class="grid">
+<div class="1/1 3/4--lap-and-up grid__cell">
+<h2 class="heading__big">Mahtavaa, kiitos paljon!</h2>
+<p><strong>Seuraavat askeleet:</strong></p>
+<ul>
+<li>Kun olet julkaissut tehtävän, jaa linkki meille!</li>
+<li>Kutsumme tehtävän perusteella osan hakijoista haastatteluun, olemme yhteyksissä sinuun viimeistään viikon kuluessa tehtävän suorittamisesta.</li>
+</ul>
+<p>Jos haluat lisätä palautetta tai kommentoida koodiasi, feel free!</p>
+<p>Tee se vaikka suoraan tähän: <span class="cursor_blink">Thanks so much for this task. The task was interesting. For me it was a new acquaintance with Heroku. Thanks for this opportunity. TODO was easy.</span></p>
+</div>
+<div class="1/1 1/4--lap-and-up grid__cell">
+<img class="image__category" src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/looking_for_candidate.svg" alt="Duunitori työpaikat" title="Duunitori työpaikat">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="fav-popup-arrow js-fav-popup-arrow"></div>
+<div class="fav-popup js-fav-popup grid-sandbox js-close-element" data-close-others="js-fav-popup-arrow">
+<div class="close-btn js-close-btn"></div>
+<div class="grid">
+<div class="1/1 grid__cell">
+<h2 class="fav-popup__title">Omat suosikit</h2>
+</div>
+<div class="fav-popup__jobentries list list--simple js-fav-popup__jobentries"></div>
+<div class="fav-popup__actions 1/1 grid__cell js-fav-actions">
+<div class="fav-popup__warning">
+<img class="fav-popup__warning__icon" src="https://skyhood-duunitori5.s3.amazonaws.com/static/web/images/ic_favourite-alert.svg">
+<p class="fav-popup__warning__text">Suosikkejasi ei tallenneta! Rekisteröidy, niin voit palata niihin vielä myöhemmin.</p>
+</div>
+<div class="fav-popup__buttons">
+<a href="/dtaccounts/register?palvelu=dtaccounts" class="btn btn--success fav-popup__buttons__btn">Rekisteröidy</a>
+<a href="/dtaccounts/login" class="btn btn-outline btn-outline--success fav-popup__buttons__btn">Kirjaudu</a>
+</div>
+</div>
+</div>
+</div>
+<div class="fav-added grid-sandbox fav-added--hidden js-fav-added js-close-element" data-close-class="fav-added--hidden">
+<div class="close-btn js-close-btn"></div>
+<div class="grid">
+<div class="1/1 grid__cell">
+<h3 class="fav-popup__title">Uusi suosikki lisätty!</h3>
+<p class="js-fav-added-title"></p>
+</div>
+<div class="fav-popup__actions 1/1 grid__cell js-fav-actions">
+<div class="fav-popup__warning">
+<img class="fav-popup__warning__icon" src="https://skyhood-duunitori5.s3.amazonaws.com/static/web/images/ic_favourite-alert.svg">
+<p class="fav-popup__warning__text">Suosikkejasi ei tallenneta! Rekisteröidy, niin voit palata niihin vielä myöhemmin.</p>
+</div>
+<div class="fav-popup__buttons">
+<a href="/dtaccounts/register?palvelu=dtaccounts" class="btn btn--success fav-popup__buttons__btn">Rekisteröidy</a>
+<a href="/dtaccounts/login" class="btn btn-outline btn-outline--success fav-popup__buttons__btn">Kirjaudu</a>
+</div>
+</div>
+</div>
+</div>
+<div class="fav-full grid-sandbox js-fav-full-alert js-close-element" data-close-others="js-modal-overlay--fav">
+<div class="close-btn js-close-btn"></div>
+<div class="grid">
+<div class="1/1 grid__cell">
+<h3 class="fav-full__title">
+<img class="fav-full__title__icon" src="https://skyhood-duunitori5.s3.amazonaws.com/static/web/images/ic_favourite-alert.svg">
+Suosikit täynnä!
+</h3>
+</div>
+<div class="1/1 grid__cell">
+<p class="fav-text">Rekisteröidy, niin voit tallentaa lisää suosikkeja ja palata niihin vielä myöhemmin.</p>
+</div>
+<div class="fav-popup__actions 1/1 grid__cell">
+<div class="fav-popup__buttons">
+<a href="/dtaccounts/register?palvelu=dtaccounts" class="btn btn--success fav-popup__buttons__btn">Rekisteröidy</a>
+<a href="/dtaccounts/login" class="btn btn-outline btn-outline--success fav-popup__buttons__btn">Kirjaudu</a>
+</div>
+</div>
+<div class="fav-full__no-thanks 1/1 grid__cell">
+<a class="js-close-btn btn-ghost--success">Ei kiitos, en halua lisätä tai tallentaa suosikkejani</a>
+</div>
+</div>
+</div>
+<footer>
+<div class="footer__backtop">
+<a>Takaisin sivun alkuun
+<svg class="footer__backtop__icon" width="13px" height="9px" viewBox="0 0 13 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square"><g id="Group-42" transform="translate(6.000000, 4.000000) rotate(-180.000000) translate(-6.000000, -4.000000) translate(1.000000, 1.000000)" stroke="#00C4B1" stroke-width="2"><g id="arrow-down-copy"> <path d="M0.221686802,0.238739633 L4.84796594,5.22088639" id="Line-Copy-2"></path><path d="M4.94558595,5.07560423 L9.57186508,0.093457466" id="Line-Copy-3"></path></g></g></g></svg>
+</a>
+</div>
+<div class="grid-sandbox grid-sandbox--tight grid-sandbox--gray footer">
+<div class="grid-container">
+<div class="grid">
+<div class="1/1 1/3--lap-and-up 1/6--desk grid__cell footer__sectionmenu">
+<a href="/"><h3>Duunitori</h3></a>
+<a><img class="icon__showmore" src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/ic_arrow-down.svg" alt="Näytä lisää" title="Näytä lisää"></a>
+<ul class="footer--list">
+<li class="footer--list--item"><a href="https://www.facebook.com/duunitori/">Facebook</a></li>
+<li class="footer--list--item"><a href="https://www.linkedin.com/company/duunitori.fi">LinkedIn</a></li>
+<li class="footer--list--item"><a href="https://twitter.com/duunitori">Twitter</a></li>
+<li class="footer--list--item"><a href="https://instagram.com/duunitori/">Instagram</a></li>
+<li class="footer--list--item"><a href="https://www.pinterest.com/duunitori/">Pinterest</a></li>
+<li class="footer--list--item"><a href="https://www.youtube.com/user/duunitori">Youtube</a></li>
+<li class="footer--list--item"><a href="http://some.duunitori.fi/">+ 500 someyhteisöä</a></li>
+<li class="footer--list--item"><a href="https://duunitori.fi/rekrytointi/tiimi/">Duunitorin tiimi</a></li>
+<li class="footer--list--item"><a href="https://hae.duunitori.fi/">Töihin Duunitorille</a></li>
+</ul>
+</div>
+<div class="1/1 1/3--lap-and-up 1/6--desk grid__cell footer__sectionmenu">
+<a href="/tyopaikat/selaa"><h3>Avoimet työpaikat</h3></a>
+<a><img class="icon__showmore" src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/ic_arrow-down.svg" alt="Näytä lisää" title="Näytä lisää"></a>
+<ul class="footer--list">
+<li class="footer--list--item"><a href="/tyopaikat/selaa/paikkakunnat/maakunnat">Työpaikat paikkakunnittain</a></li>
+<li class="footer--list--item"><a href="/tyopaikat/selaa/yritykset">Työpaikat yrityksittäin</a></li>
+<li class="footer--list--item"><a href="/tyopaikat/selaa/ammatit">Työpaikat ammattinimikkeittäin</a></li>
+<li class="footer--list--item"><a href="/tyopaikat">Työpaikat ajan mukaan</a></li>
+<li class="footer--list--item"><a href="/alueet/selaa">Aluetiedot</a></li>
+<li class="footer--list--item"><a href="/yritykset/selaa">Yritystiedot</a></li>
+<li class="footer--list--item"><a href="/ammatit/selaa">Ammattinimikkeet</a></li>
+<li class="footer--list--item"><a href="/palkat">Ammattinimikkeiden palkat</a></li>
+<li class="footer--list--item"><a href="https://jobbland.se" target="_blank">Lediga jobb i Sverige</a></li>
+<li class="footer--list--item"><a href="https://kesatyot.fi">Kesätyöpaikat 2019</a></li>
+</ul>
+</div>
+<div class="1/1 1/3--lap-and-up 1/6--desk grid__cell footer__sectionmenu">
+<a href="/tyoelama"><h3>Työelämäuutiset</h3></a>
+<a><img class="icon__showmore" src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/ic_arrow-down.svg" alt="Näytä lisää" title="Näytä lisää"></a>
+<ul class="footer--list">
+<li class="footer--list--item"><a href="/tyoelama/category/tyoelama">Uusimmat</a></li>
+<li class="footer--list--item"><a href="/kesatyo">Kesätyö</a></li>
+<li class="footer--list--item"><a href="/tyoelama/category/tyonhaku">Työnhaku</a></li>
+<li class="footer--list--item"><a href="/tyoelama/category/tyoelama">Työelämä</a></li>
+<li class="footer--list--item"><a href="/tyoelama/category/tiedotteet">Tiedotteet</a></li>
+<li class="footer--list--item"><a href="/tyoelama/category/yhteistyo">Yhteistyö</a></li>
+<li class="footer--list--item"><a href="/vaalikone">Duunitorin vaalikone - Eduskuntavaalit 2019</a></li>
+<li class="footer--list--item"><a href="/duunivaalit">#Duunivaalit</a></li>
+<li class="footer--list--item"><a href="/media">Duunitorin media</a></li>
+<li class="footer--list--item"><a href="/tyoelama/tyomarkkinatori">Työmarkkinatori</a></li>
+</ul>
+</div>
+<div class="1/1 1/3--lap-and-up 1/6--desk grid__cell footer__sectionmenu">
+<h3>Testit</h3>
+<a><img class="icon__showmore" src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/ic_arrow-down.svg" alt="Näytä lisää" title="Näytä lisää"></a>
+<ul class="footer--list">
+<li class="footer--list--item"><a href="/tyyppitesti/">Tyyppitesti</a></li>
+<li class="footer--list--item"><a href="/tyyppitesti/tietoa">Tietoa tyyppitestistä</a></li>
+<li class="footer--list--item"><a href="/tyyppitesti/tyyppikuvaukset">Tyyppikuvaukset</a></li>
+</ul>
+</div>
+<div class="1/1 1/3--lap-and-up 1/6--desk grid__cell footer__sectionmenu">
+<a href="/tyoelama/tyonhakuopas"><h3>Oppaat</h3></a>
+<a><img class="icon__showmore" src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/ic_arrow-down.svg" alt="Näytä lisää" title="Näytä lisää"></a>
+<ul class="footer--list">
+<li class="footer--list--item"><a href="/tyoelama/tyonhakuopas/tyohakemus">Työhakemus</a></li>
+<li class="footer--list--item"><a href="/tyoelama/tyonhakuopas/ansioluettelo">Ansioluettelo</a></li>
+<li class="footer--list--item"><a href="/tyoelama/tyonhakuopas/tyohaastattelu">Työhaastattelu</a></li>
+<li class="footer--list--item"><a href="/tyoelama/tyonhakuopas/verkostoituminen">Verkostoituminen</a></li>
+<li class="footer--list--item"><a href="/tyoelama/tyonhakuopas/urasuunnittelu">Urasuunnittelu</a></li>
+<li class="footer--list--item"><a href="/tyoelama/yrittajanopas/yrityksen-perustaminen">Yrityksen perustaminen</a></li>
+<li class="footer--list--item"><a href="/tyoelama/yrittajanopas/yhtiomuodon-valinta">Yhtiömuodon valinta</a></li>
+<li class="footer--list--item"><a href="/tyoelama/yrittajanopas/taloudenhallinta">Taloudenhallinta</a></li>
+<li class="footer--list--item"><a href="/tyoelama/yrittajanopas/ideasta-liiketoiminnaksi">Ideasta liiketoiminnaksi</a></li>
+<li class="footer--list--item"><a href="/tyoelama/yrittajanopas/yrittajan-turva">Yrittäjän turva</a></li>
+<li class="footer--list--item"><a href="/tyoelama/yrittajanopas/yrittajatarinat">Yrittäjätarinat</a></li>
+</ul>
+</div>
+<div class="1/1 1/3--lap-and-up 1/6--desk grid__cell footer__sectionmenu">
+<a href="https://duunitori.fi/rekrytointi/"><h3>Työnantajalle</h3></a> <a><img class="icon__showmore" src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/ic_arrow-down.svg" alt="Näytä lisää" title="Näytä lisää"></a>
+<ul class="footer--list">
+<li class="footer--list--item"><a href="/tyopaikkailmoitus">Jätä työpaikkailmoitus</a></li>
+<li class="footer--list--item"><a href="https://duunitori.fi/rekrytointi/palvelut/tyonantajamielikuva/">Työnantajamielikuva</a></li>
+<li class="footer--list--item"><a href="https://duunitori.fi/rekrytointi/rekrytointitutkimus/">Rekrytointitutkimus</a></li>
+<li class="footer--list--item"><a href="http://suorahakuyritykset.fi/">Suorahakuyritykset</a></li>
+<li class="footer--list--item"><a href="https://duunitori.fi/rekrytointi/yritys/">Yrityksestä</a></li>
+<li class="footer--list--item"><a href="/maanantaifiilis">Maanantaifiilis-kampanja</a></li>
+<li class="footer--list--item"><a href="/hakemukset">Hakemukset</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="grid-sandbox grid-sandbox--center grid-sandbox--tight grid-sandbox--secondary footer footer--dark">
+<div class="grid-container">
+<div class="grid">
+<div class="1/1 1/3--lap-and-up 2/4--desk grid__cell">
+<img class="footer__logo" src="https://duunitori.imgix.net/static/images/logo-duunitori-rgb-horisontal-inverse.svg" alt="Duunitori logo" title="Duunitori logo">
+</div>
+<div class="1/1 1/3--lap-and-up 1/4--desk grid__cell footer__some-text">
+Löydät meidät myös täältä:
+</div>
+<div class="1/1 1/3--lap-and-up 1/4--desk grid__cell footer__some">
+<a class="footer__some-icon" href="https://www.facebook.com/duunitori/" target="_blank"><img src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/ic_fb_icon.svg" alt="Duunitori Facebookissa" title="Duunitori Facebookissa"></a>
+<a class="footer__some-icon" href="https://www.linkedin.com/company/duunitori.fi" target="_blank"><img src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/ic_linkedin_icon.svg" alt="Duunitori Linkedinissa" title="Duunitori Linkedinissa"></a>
+<a class="footer__some-icon" href="https://twitter.com/duunitori" target="_blank"><img src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/ic_twitter_icon.svg" alt="Duunitori Twitterissa" title="Duunitori Twitterissa"></a>
+<a class="footer__some-icon" href="https://instagram.com/duunitori/" target="_blank"><img src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/ic_ig_icon.svg" alt="Duunitori Instgramissa" title="Duunitori Instgramissa"></a>
+<a class="footer__some-icon" href="https://www.youtube.com/user/duunitori" target="_blank"><img src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/ic_youtube_icon.svg" alt="Duunitori Youtubessa" title="Duunitori Youtubessa"></a>
+<a class="footer__some-icon" href="https://www.pinterest.com/duunitori/" target="_blank"><img src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/ic_pinterest_icon.svg" alt="Duunitori Pinterestissa" title="Duunitori Pinterestissa"></a>
+</div>
+<div class="1/1 grid__cell">
+<p>Duunitori™ on Suomen suurin työnhakukone ja uudenaikainen rekrytointimedia.
+Se kokoaa yhteen avoimet työpaikkailmoitukset ja ohjaa ne oman portaalinsa lisäksi
+sadoille ylläpitämilleen sosiaalisen median sivuille. Duunitorin työelämäosio tarjoaa
+ajankohtaisia vinkkejä ja uutisia liittyen työnhakuun, työelämään ja rekrytointiin.</p>
+<p>
+<small>
+<a href="/tietosuoja/kayttoehdot_tyonhakijalle" target="_blank">Käyttöehdot työnhakijalle</a>,
+<a href="/tietosuoja/tietosuojaseloste_tyonhakijalle" target="_blank">tietosuojaseloste työnhakijalle</a>,
+<a href="/tietosuoja/kayttoehdot_tyonantajalle" target="_blank">käyttöehdot työnantajalle</a>,
+<a href="/tietosuoja/tietosuojaseloste_tyonantajalle" target="_blank">tietosuojaseloste työnantajalle</a>.
+</small>
+<br />
+<small>
+© 2019 Duunitori Oy. Kaikki oikeudet pidätetään.
+</small>
+</p>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<div class="modal modal--bottom modal--hidden gdpr-modal modal__content modal__content--white" role="alert">
+<div class="icon-circle__outer">
+<div class="icon-circle__inner">
+<img class="icon-circle__icon" src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/gdpr_icon.svg" alt="Icon" title="Icon">
+</div>
+</div>
+<div class="modal__body modal__body--gdpr">
+<h2 class="gdpr-modal__heading">Helpompaa ja turvallisempaa työnhakua</h2>
+<p class="gdpr-modal__descr">Tehdäksemme työnhaustasi helpompaa, käytämme Duunitorin palvelussa evästeitä ja vastaavia verkkopalvelun toimivuutta edistäviä teknologioita.
+Duunitorin keräämien selaintietojen avulla voimme näyttää sinulle osuvampia ilmoituksia Duunitorilla ja muualla verkossa.
+Hyväksymällä evästeet jatkat sivuston käyttöä kuten aiemmin.
+Lue tarkemmin <a href="/tietosuoja/tietosuojaseloste_tyonhakijalle" rel="nofollow" target="_blank">tietosuojaselosteestamme</a>.</p>
+<button type="button" class="btn btn--primary gdpr-modal__button gdpr-modal__button--accept gdpr-close" aria-label="Close" data-dismiss="alert">Hyväksyn</button>
+<a href="" rel="nofollow" target="_blank"><p class="js-show-other__button gdpr-modal__show-other">Lue lisää</p></a>
+<div class="js-gdpr-other__content gdpr-other__content gdpr-other__content--hidden">
+<p>Mikäli et halua Duunitorin keräävän tietosuojaselosteessa
+mainittuja selaintietoja vierailustasi, mahdollistavat useimmat selainohjelmat
+eväste-toiminnon poiskytkemisen. On kuitenkin hyvä ottaa huomioon, että evästeet
+voivat olla tarpeellisia joidenkin Duunitorin ylläpitämien sivujen ja tarjoamien
+palveluiden asianmukaiselle toimimiselle.</p>
+<p>Evästeiden poiskytkentä yleisimmissä selaimissa:</p>
+<p>
+<b>Chrome</b><br>
+Valitse Muokkaaminen ja hallinta -valikosta kohta Asetukset.<br>
+Valitse sivun alaosassa Lisäasetukset.<br>
+Valitse Tietosuoja ja turvallisuus -osiossa Sisältöasetukset.<br>
+Valitse Evästeet. </p>
+<p>
+<b>Firefox</b><br>
+Valitse päävalikosta kohta Asetukset.<br>
+Valitse Tietosuoja ja turvallisuus.<br>
+Valitse Historiatiedot -kohdassa alasvetovalikosta Valitut historiatiedot.</p>
+<p>
+<b>Safari</b><br>
+Valitse Safari-valikosta kohta Asetukset.<br>
+Valitse Yksityisyys.<br>
+Valitse Estä kaikki evästeet tai Verkkosivujen datan hallitseminen.</p>
+<p>
+<b>Microsoft Edge</b><br>
+Valitse päävalikosta kohta Asetukset.<br>
+Valitse Näytä lisäasetukset.<br>
+Valitse suojaustaso valikon alaosan kohdasta Evästeet.</p>
+<p class="text-xs-left">Mikäli muutit selainasetuksiasi, niin päivitä sivu.</p>
+<button type="button" onclick="javascript:location.reload();" rel="nofollow" class="btn btn--primary gdpr-modal__button gdpr-modal__button--refresh">Päivitä</button>
+</div>
+</div>
+</div>
+<script>
+    if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+      document.querySelector('body').classList.remove('notouch');
+    }
+  </script>
+<script type="text/javascript" src='https://skyhood-duunitori5.s3.amazonaws.com/static/web/js/script-cfdf7f69ec.js'></script>
+<script type="text/javascript">
+
+      // These dependencies should be renamed after some thorough search and replace work, but for now this'll do
+      $script(['https://skyhood-duunitori5.s3.amazonaws.com/static/web/js/jquery.js', 'https://skyhood-duunitori5.s3.amazonaws.com/static/js/cookie.js'], "bundle");
+      $script.ready('bundle', function() { $script('https://skyhood-duunitori5.s3.amazonaws.com/static/web/js/gdpr-popup-c1a44c769a.js', 'jquery'); });
+
+
+
+      $script
+          .ready(["jquery"], function() {
+
+
+              $script('https://skyhood-duunitori5.s3.amazonaws.com/static/web/js/main-70cb8e9dc1.js', function(){
+
+              });
+
+
+              API_AREA_URL = '/api/v1/areas'
+              API_SEARCH_URL = '/api/v1/search_autocomplete'
+              CAT_ICON_SRC = 'https://skyhood-duunitori5.s3.amazonaws.com/static/web/images/ic_list_cat.svg'
+              COMPANY_ICON_SRC = 'https://skyhood-duunitori5.s3.amazonaws.com/static/web/images/ic_list_company.svg'
+              COMPANY_GROUP_ICON_SRC = 'https://skyhood-duunitori5.s3.amazonaws.com/static/web/images/ic_list_company-group.svg'
+              JOB_ICON_SRC = 'https://skyhood-duunitori5.s3.amazonaws.com/static/web/images/ic_list_job.svg'
+              LOCATION_ICON_SRC = 'https://skyhood-duunitori5.s3.amazonaws.com/static/web/images/ic_location-outline.svg'
+              KEYWORD_ICON_SRC = 'https://skyhood-duunitori5.s3.amazonaws.com/static/web/images/ic_nicetohave_gray.svg'
+
+
+
+              $script(['https://skyhood-duunitori5.s3.amazonaws.com/static/web/js/fav-eb47db0cdf.js']);
+
+              $script('https://skyhood-duunitori5.s3.amazonaws.com/static/web/js/jquery-ui-748b3dcaf0.min.js', 'ui', function() {
+
+
+              });
+
+              $script(['https://skyhood-duunitori5.s3.amazonaws.com/static/web/js/jobwatch_hints-f29463da77.js']);
+          });
+
+      $script('https://browser.sentry-cdn.com/4.3.4/bundle.min.js', "sentry");
+      $script
+        .ready(["sentry"], function() {
+          if (typeof(Sentry) !== 'undefined' && Sentry) {
+            Sentry.init({
+              dsn: 'https://d0109c2bbc164c169c83ff4a2030cc77@sentry.io/1331381',
+              release: '25cfe3be7aa3c776aac0409369927bfea93dc6bd',
+              environment: 'production'
+            });
+          }
+        });
+  </script>
+<script type="text/javascript" src='https://skyhood-duunitori5.s3.amazonaws.com/static/web/js/jquery.js'></script>
+<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js'></script>
+<script type="text/javascript">
+
+  $(function() {
+
+    $('.cursor_blink').click( function () {
+      alert("koodiin ;)")
+    })
+
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: Array.from(Array(100).keys()),
+            datasets: [{
+                label: 'Page views / Visible',
+                data: {{ page_view_drow }},
+                borderColor: "red",
+                borderWidth: 1
+            }, {
+                label: 'Apply clicks / Visible',
+                data: {{ apply_click_drow }},
+                borderColor: "green",
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+    });
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+<script>
+   WebFont.load({
+      google: {
+        families: ['Source Sans Pro:400,400i,600,700']
+      }
+    });
+  </script>
+
+<script>
+  var $buoop = {c:2};
+  function $buo_f(){
+   var e = document.createElement("script");
+   e.src = "//browser-update.org/update.min.js";
+   document.body.appendChild(e);
+  };
+  try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+  catch(e){window.attachEvent("onload", $buo_f)}
+  </script>
+{% endblock %}
